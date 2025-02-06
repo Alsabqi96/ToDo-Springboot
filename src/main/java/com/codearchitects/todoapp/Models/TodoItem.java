@@ -36,11 +36,11 @@ public class TodoItem {
         this.description = description;
     }
 
-    public String getCompleted() {
+    public Boolean getCompleted() {
         return completed;
     }
 
-    public void setCompleted(String completed) {
+    public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
 
@@ -53,7 +53,7 @@ public class TodoItem {
     }
 
     private String description;
-    private String completed;
+    private Boolean completed;
     private LocalDateTime createdAt;
 
     @PrePersist
