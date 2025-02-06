@@ -1,5 +1,11 @@
 package com.codearchitects.todoapp.Services;
+import org.springframework.stereotype.Service;
 
-public class TodoItemService {
-}
+
+
+
+
+@Service
+public class TodoItemService {}
+
 
