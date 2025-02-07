@@ -19,9 +19,15 @@ public class TodoItemService {
         dto.setCompleted(todoItem.getCompleted());
         return dto;
     }
+
     public List<TodoItemDTO> getAllTodos() {
         return repository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
     }
+
+    public Optional<TodoItemDTO> getTodoById(Long id) {
+        return repository.findById(id).map(this::convertToDTO);
+    }
+
 
 }
 
