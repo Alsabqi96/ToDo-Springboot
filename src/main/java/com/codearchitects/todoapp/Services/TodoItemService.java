@@ -28,6 +28,23 @@ public class TodoItemService {
         return repository.findById(id).map(this::convertToDTO);
     }
 
+    public TodoItemDTO createTodoItem(CreateTodoRequest request) {
+        TodoItem todoItem = new TodoItem();
+        todoItem.setTitle(request.getTitle());
+        todoItem.setDescription(request.getDescription());
+        todoItem.setCompleted(false);
+        return convertToDTO(repository.save(todoItem));
+    }
+
+    public TodoItemDTO updateTodoItem(Long id, UpdateTodoRequest request) {
+        return repository.findById(id).map(todo -> {
+            todo.setTitle(request.getTitle());
+            todo.setDescription(request.getDescription());
+            todo.setCompleted(request.getCompleted());
+            return convertToDTO(repository.save(todo));
+        }).orElseThrow(() -> new RuntimeException("Todo item not found"));
+    }
+
 
 }
 
