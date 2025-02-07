@@ -45,8 +45,13 @@ public class TodoItemService {
         }).orElseThrow(() -> new RuntimeException("Todo item not found"));
     }
 
-
+    public void deleteTodoItem(Long id) {
+        repository.deleteById(id);
+    }
 }
+
+
+
 
 
 
