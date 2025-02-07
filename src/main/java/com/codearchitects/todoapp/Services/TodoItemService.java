@@ -1,10 +1,17 @@
 package com.codearchitects.todoapp.Services;
+
+import com.codearchitects.todoapp.DTOs.TodoItemDTO;
+import com.codearchitects.todoapp.Models.TodoItem;
+import com.codearchitects.todoapp.Repositories.TodoItemRepository;
+import com.codearchitects.todoapp.RequestObjects.CreateTodoRequest;
+import com.codearchitects.todoapp.RequestObjects.UpdateTodoRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
-
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TodoItemService {
@@ -40,7 +47,10 @@ public class TodoItemService {
         return repository.findById(id).map(todo -> {
             todo.setTitle(request.getTitle());
             todo.setDescription(request.getDescription());
-            todo.setCompleted(request.getCompleted());
+            if (request.getCompleted() != null)
+            {
+                todo.setCompleted(request.getCompleted());
+            }
             return convertToDTO(repository.save(todo));
         }).orElseThrow(() -> new RuntimeException("Todo item not found"));
     }

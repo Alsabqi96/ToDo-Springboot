@@ -29,4 +29,8 @@ public class UpdateTodoRequest {
 
     private String description;
     private boolean completed;
+
+    public Boolean getCompleted() {
+        return completed;
+    }
 }
