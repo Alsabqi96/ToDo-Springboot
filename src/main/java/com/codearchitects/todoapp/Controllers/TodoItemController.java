@@ -35,7 +35,7 @@ public class TodoItemController {
         return service.createTodoItem(request);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public TodoItemDTO updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         return service.updateTodoItem(id, request);
     }
