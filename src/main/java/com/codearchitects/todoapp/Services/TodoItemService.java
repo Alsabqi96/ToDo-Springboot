@@ -31,8 +31,10 @@ public class TodoItemService {
         return repository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
-    public Optional<TodoItemDTO> getTodoById(Long id) {
-        return repository.findById(id).map(this::convertToDTO);
+    public TodoItemDTO getTodoById(Long id) {
+        return repository.findById(id)
+                .map(this::convertToDTO)
+                .orElseThrow(() -> new RuntimeException("Todo item with ID " + id + " not found"));
     }
 
     public TodoItemDTO createTodoItem(CreateTodoRequest request) {
