@@ -4,6 +4,8 @@ import com.codearchitects.todoapp.RequestObjects.CreateTodoRequest;
 import com.codearchitects.todoapp.RequestObjects.UpdateTodoRequest;
 import com.codearchitects.todoapp.Services.TodoItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,9 +22,12 @@ public class TodoItemController {
     }
 
     @GetMapping("/{id}")
-    public TodoItemDTO getTodoById(@PathVariable Long id) {
-        return service.getTodoById(id)
-                .orElseThrow(() -> new RuntimeException("Todo item not found"));
+    public ResponseEntity<?> getTodoById(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok(service.getTodoById(id));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Todo item not found: " + e.getMessage());
+        }
     }
 
     @PostMapping
