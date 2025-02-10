@@ -118,7 +118,7 @@ button {
     background-color: #c82333;
 }
 
-
+/* Completed Task */
 .completed {
     text-decoration: line-through;
     color: gray;
