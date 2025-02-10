@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/todos")
+@CrossOrigin(origins = "*")
 public class TodoItemController {
     @Autowired
     private TodoItemService service;
