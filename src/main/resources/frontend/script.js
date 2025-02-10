@@ -1,5 +1,6 @@
 const API_URL = "http://localhost:8080/api/v1/todos";
 
+
 // Fetch and display To-Do items
 async function fetchTodos() {
     const response = await fetch(API_URL);
@@ -81,3 +82,4 @@ async function deleteTodo(id) {
 
 // Load To-Do items on page load
 document.addEventListener("DOMContentLoaded", fetchTodos);
+
