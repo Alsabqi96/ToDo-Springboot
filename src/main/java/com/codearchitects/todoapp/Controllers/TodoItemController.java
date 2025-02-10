@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/todos")
+@RequestMapping(path = "/api/v1/todos")
 @CrossOrigin(origins = "*")
 public class TodoItemController {
     @Autowired
