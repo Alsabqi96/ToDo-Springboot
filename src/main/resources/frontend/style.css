@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -20,13 +19,13 @@ body {
     text-align: center;
 }
 
-/* Header */
+
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* To-Do Input Form */
+
 .todo-form {
     display: flex;
     gap: 10px;
@@ -56,7 +55,7 @@ h1 {
     background-color: #218838;
 }
 
-/* To-Do List */
+
 ul {
     padding: 0;
     display: flex;
@@ -82,7 +81,7 @@ li:hover {
     transform: scale(1.05);
 }
 
-/* Buttons */
+
 button {
     padding: 8px 12px;
     border: none;
@@ -119,7 +118,7 @@ button {
     background-color: #c82333;
 }
 
-/* Completed Task */
+
 .completed {
     text-decoration: line-through;
     color: gray;
