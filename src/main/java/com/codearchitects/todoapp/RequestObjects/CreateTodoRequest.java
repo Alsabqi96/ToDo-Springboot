@@ -1,5 +1,7 @@
 package com.codearchitects.todoapp.RequestObjects;
 
+
+//request object for creating new todo item
 public class CreateTodoRequest {
     private String title;
     private String description;
