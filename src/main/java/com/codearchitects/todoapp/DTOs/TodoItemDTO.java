@@ -1,12 +1,16 @@
 package com.codearchitects.todoapp.DTOs;
 
+
+//data transfer object for todo items
 public class TodoItemDTO {
     private Long id;
     private String title;
     private String description;
     private Boolean completed;
 
-    // Setter and Getter
+
+
+    //getters and setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
