@@ -3,6 +3,8 @@ package com.codearchitects.todoapp.Models;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+
+//entity representing in a todo item in database
 @Entity
 
 public class TodoItem {
@@ -21,12 +23,14 @@ public class TodoItem {
 
     private LocalDateTime createdAt;
 
+
+    //auto assigns creation timestamp before inserting into database
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
     }
 
-    //  Getters
+    //getters
     public Long getId() {
         return id;
     }
@@ -47,7 +51,8 @@ public class TodoItem {
         return createdAt;
     }
 
-    //  Setters
+
+    //setters
     public void setId(Long id) {
         this.id = id;
     }
