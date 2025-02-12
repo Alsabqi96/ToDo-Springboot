@@ -5,46 +5,79 @@ import com.codearchitects.todoapp.RequestObjects.CreateTodoRequest;
 import com.codearchitects.todoapp.RequestObjects.UpdateTodoRequest;
 import com.codearchitects.todoapp.Services.TodoItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "api/v1/todos")
 @CrossOrigin(origins = "*")
+@RequestMapping(path = "/api/v1/todos")
 public class TodoItemController {
 
+    private static final Logger logger = LoggerFactory.getLogger(TodoItemController.class);
+
     @Autowired
-    private TodoItemService todoItemService;
+    private TodoItemService service;
 
-    // Get To-Do by ID
-    @GetMapping(value = "{id}")
-    public TodoItemDTO getTodoById(@PathVariable Long id) {
-        return todoItemService.getTodoById(id);
+
+    //get all To-Do items
+    @GetMapping
+    public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
+        List<TodoItemDTO> todos = service.getAllTodos();
+        return todos.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(todos);
     }
 
-    // Get All To-Do Items
-    @GetMapping(value = "getAll")
-    public List<TodoItemDTO> getAllTodos() {
-        return todoItemService.getAllTodos();
+
+    //get a To-Do item by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getTodoById(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok(service.getTodoById(id));
+        } catch (RuntimeException e) {
+            logger.error("Error fetching To-Do with ID {}: {}", id, e.getMessage());
+            return ResponseEntity.notFound().build();
+        }
     }
 
-    // Create a new To-Do item
+
+    //create a new To-Do item
     @PostMapping
-    public TodoItemDTO createTodoItem(@RequestBody CreateTodoRequest request) {
-        return todoItemService.createTodoItem(request);
+    public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
+        try {
+            TodoItemDTO createdTodo = service.createTodoItem(request);
+            return ResponseEntity.status(201).body(createdTodo);
+        } catch (Exception e) {
+            logger.error("Error creating To-Do: {}", e.getMessage());
+            return ResponseEntity.badRequest().body("Error creating To-Do item: " + e.getMessage());
+        }
     }
 
-    // Update an existing To-Do item
-    @PutMapping(value = "{id}")
-    public TodoItemDTO updateTodoItem(@RequestBody UpdateTodoRequest request, @PathVariable Long id) {
-        return todoItemService.updateTodoItem(id, request);
+
+    //Update an existing To-Do item
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
+        try {
+            TodoItemDTO updatedTodo = service.updateTodoItem(id, request);
+            return ResponseEntity.ok(updatedTodo);
+        } catch (RuntimeException e) {
+            logger.error("Error updating To-Do with ID {}: {}", id, e.getMessage());
+            return ResponseEntity.notFound().build();
+        }
     }
 
-    // Delete a To-Do item
-    @DeleteMapping(value = "{id}")
-    public String deleteTodoItemById(@PathVariable Long id) {
-        todoItemService.deleteTodoItem(id);
-        return "Todo item deleted successfully.";
+
+    //delete a To-Do item by ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteTodoItem(@PathVariable Long id) {
+        try {
+            service.deleteTodoItem(id);
+            return ResponseEntity.ok("Todo item deleted successfully");
+        } catch (RuntimeException e) {
+            logger.error("Error deleting To-Do with ID {}: {}", id, e.getMessage());
+            return ResponseEntity.notFound().build();
+        }
     }
 }
