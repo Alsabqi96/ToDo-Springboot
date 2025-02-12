@@ -23,7 +23,7 @@ public class TodoItemController {
     private TodoItemService service;
 
 
-    //get all To-Do items
+    //get all todo items
     @GetMapping
     public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
         List<TodoItemDTO> todos = service.getAllTodos();
@@ -31,7 +31,7 @@ public class TodoItemController {
     }
 
 
-    //get a To-Do item by ID
+    //get todo item by ID
     @GetMapping("/{id}")
     public ResponseEntity<?> getTodoById(@PathVariable Long id) {
         try {
@@ -43,7 +43,7 @@ public class TodoItemController {
     }
 
 
-    //create a new To-Do item
+    //create  new todo item
     @PostMapping
     public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
         try {
@@ -56,7 +56,7 @@ public class TodoItemController {
     }
 
 
-    //Update an existing To-Do item
+    //update  existing todo item
     @PutMapping("/{id}")
     public ResponseEntity<?> updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         try {
@@ -69,7 +69,7 @@ public class TodoItemController {
     }
 
 
-    //delete a To-Do item by ID
+    //delete  todo item by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteTodoItem(@PathVariable Long id) {
         try {
