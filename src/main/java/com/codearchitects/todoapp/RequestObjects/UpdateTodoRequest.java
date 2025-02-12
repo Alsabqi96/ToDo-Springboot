@@ -1,5 +1,7 @@
 package com.codearchitects.todoapp.RequestObjects;
 
+
+//request object for updating existing todo item
 public class UpdateTodoRequest {
     private String title;
     private String description;
