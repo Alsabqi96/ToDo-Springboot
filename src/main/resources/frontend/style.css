@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif; // Set font style
     background-color: #f7f9fc; // Light background for the page
     color: #333; // Default text color
-    margin: 0; // Remove default browser margin
+    margin: 0; // Remove default browser margin 
     padding: 0; // Remove default browser padding
     display: flex; // Center the container using Flexbox
     justify-content: center; // Horizontally center the container
