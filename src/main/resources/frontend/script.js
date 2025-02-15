@@ -100,3 +100,5 @@ function closeModal() {
 
 // load todo on page load
 fetchTodos();
+
+
