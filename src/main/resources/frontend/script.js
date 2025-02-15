@@ -1,14 +1,14 @@
 const API_URL = "http://localhost:8080/api/v1/todos";
 let editTodoId = null;
 
-// Fetch Todos from MySQL via Spring Boot API
+// fetch todo from MySQL via Spring Boot API
 async function fetchTodos() {
     const response = await fetch(API_URL);
     const todos = await response.json();
     displayTodos(todos);
 }
 
-// Display Todos in the UI
+// display todo in the UI
 function displayTodos(todos) {
     const todoList = document.getElementById("todoList");
     todoList.innerHTML = "";
@@ -29,7 +29,7 @@ function displayTodos(todos) {
     });
 }
 
-// Add New Todo
+// add new todo
 async function addTodo() {
     const title = document.getElementById("todoTitle").value;
     const description = document.getElementById("todoDescription").value;
@@ -50,7 +50,7 @@ async function addTodo() {
     document.getElementById("todoDescription").value = "";
 }
 
-// Toggle Complete Status
+// toggle complete status
 async function toggleComplete(id, completed) {
     await fetch(`${API_URL}/${id}`, {
         method: "PUT",
@@ -61,7 +61,7 @@ async function toggleComplete(id, completed) {
     fetchTodos();
 }
 
-// Delete Todo
+// delete todo
 async function deleteTodo(id) {
     await fetch(`${API_URL}/${id}`, {
         method: "DELETE"
@@ -70,7 +70,7 @@ async function deleteTodo(id) {
     fetchTodos();
 }
 
-// Open Edit Modal
+// open edit modal
 function editTodo(id, title, description) {
     editTodoId = id;
     document.getElementById("editTitle").value = title;
@@ -78,7 +78,7 @@ function editTodo(id, title, description) {
     document.getElementById("editModal").style.display = "block";
 }
 
-// Save Edited Todo
+// save edited Todo
 async function saveEdit() {
     const title = document.getElementById("editTitle").value;
     const description = document.getElementById("editDescription").value;
@@ -93,10 +93,10 @@ async function saveEdit() {
     fetchTodos();
 }
 
-// Close Edit Modal
+// close edit modal
 function closeModal() {
     document.getElementById("editModal").style.display = "none";
 }
 
-// Load Todos on Page Load
+// load todo on page load
 fetchTodos();
