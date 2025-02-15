@@ -9,7 +9,7 @@ body {
     display: flex; // Center the container using Flexbox
     justify-content: center; // Horizontally center the
     align-items: center; // Vertically center the container
-    height: 100vh; // Full viewport height 
+    height: 100vh; // Full viewport height
 }
 
 // Container for the To-Do List
