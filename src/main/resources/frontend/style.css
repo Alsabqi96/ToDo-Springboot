@@ -16,7 +16,7 @@ body {
 .container {
     background: white; // White background for the container
     width: 400px; // Fixed width
-    padding: 20px; // Padding inside the container 
+    padding: 20px; // Padding inside the container
     border-radius: 8px; // Rounded corners
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
     text-align: center; // Center align content
