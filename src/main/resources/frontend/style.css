@@ -33,7 +33,7 @@ h1 {
 // Input Container: Flex Column
 .input-container {
     display: flex; // Use flexbox
-    flex-direction: column; // Stack children vertically
+    flex-direction: column; // Stack children vertically git commit -m "Commit message"
     gap: 10px; // Space between inputs
 }
 
