@@ -14,7 +14,7 @@ body {
 
 // Container for the To-Do List
 .container {
-    background: white; // White background for the container 
+    background: white; // White background for the container
     width: 400px; // Fixed width
     padding: 20px; // Padding inside the container
     border-radius: 8px; // Rounded corners
