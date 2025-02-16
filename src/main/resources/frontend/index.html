@@ -1,52 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    //metadata and page title
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-
-    //linking external css file
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-//main container for todo app
 <div class="container">
-    //app title
     <h1>📝 My To-Do List</h1>
-
-    //input fields for adding new todo
     <div class="input-container">
-        //input for todo title
         <input type="text" id="todoTitle" placeholder="Enter task title">
-        //input for todo description
         <input type="text" id="todoDescription" placeholder="Enter task description">
-        //add button to create new todo
         <button onclick="addTodo()">➕ Add</button>
     </div>
-
-    //list to display all todos
     <ul id="todoList"></ul>
 </div>
-
-//model for  editing todo
 <div id="editModal" class="modal">
     <div class="modal-content">
-        //model title
         <h2>Edit Task</h2>
-
-        //inputs for editing todo details
         <input type="text" id="editTitle" placeholder="Edit title">
         <input type="text" id="editDescription" placeholder="Edit description">
-
-        //buttons for saving or cancelling edits
         <button onclick="saveEdit()">💾 Save</button>
         <button onclick="closeModal()">❌ Cancel</button>
     </div>
 </div>
-
- //linking external js file
 <script src="script.js"></script>
 </body>
 </html>
