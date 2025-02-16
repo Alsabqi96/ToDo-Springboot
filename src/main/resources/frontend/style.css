@@ -1,164 +1,155 @@
-// Light Theme
-// Global Styles
+/* Light Theme */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif; // Set font style
-    background-color: #f7f9fc; // Light background for the page
-    color: #333; // Default text color
-    margin: 0; // Remove default browser margin
-    padding: 0; // Remove default browser padding
-    display: flex; // Center the container using Flexbox
-    justify-content: center; // Horizontally center the
-    align-items: center; // Vertically center the container
-    height: 100vh; // Full viewport height
+    font-family: Arial, sans-serif; /* Set font style */
+    background-color: #f7f9fc; /* Light background for the page */
+    color: #333; /* Default text color */
+    margin: 0; /* Remove default browser margin */
+    padding: 0; /* Remove default browser padding */
+    display: flex; /* Center the container using Flexbox */
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 100vh; /* Full viewport height */
 }
 
-// Container for the To-Do List
+/* Container for the To-Do List */
 .container {
-    background: white; // White background for the container
-    width: 400px; // Fixed width
-    padding: 20px; // Padding inside the container
-    border-radius: 8px; // Rounded corners
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
-    text-align: center; // Center align conten
+    background: white; /* White background for the container */
+    width: 400px; /* Fixed width */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Center align content */
 }
 
-// Title Styling
+/* Title Styling */
 h1 {
-    color: #007BFF; // Bright blue color for the title
+    color: #007BFF; /* Bright blue color for the title */
 }
 
-
-// Input Section Styles
-
-// Input Container: Flex Column
+/* Input Section Styles */
+/* Input Container: Flex Column */
 .input-container {
-    display: flex; // Use flexbox
-    flex-direction: column; // Stack children vertically
-    gap: 10px; // Space between inputs
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px; /* Space between inputs */
 }
 
-// Style for Input Fields
+/* Style for Input Fields */
 input {
-    padding: 10px; // Padding inside input
-    border: 1px solid #ddd; // Light gray border
-    border-radius: 5px; // Rounded corners
-    font-size: 16px; // Larger font for readability
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font for readability */
 }
 
-
-// Button Styles
-
-// General Button Style
+/* Button Styles */
+/* General Button Style */
 button {
-    padding: 10px; // Padding inside button
-    background-color: #007BFF; // Default blue color
-    color: white; // White text
-    border: none; // No border
-    cursor: pointer; // Show pointer cursor on hover
-    border-radius: 5px; // Rounded corners
-    font-size: 16px; // Larger text size
+    padding: 10px; /* Padding inside button */
+    background-color: #007BFF; /* Default blue color */
+    color: white; /* White text */
+    border: none; /* No border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger text size */
 }
 
-// Button Hover Effect
+/* Button Hover Effect */
 button:hover {
-    background-color: #0056b3; // Darker blue on hover
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-
-// To-Do List Styles
-// Style for To-Do List
+/* To-Do List Styles */
+/* Style for To-Do List */
 ul {
-    list-style-type: none; // Remove default bullet points
-    padding: 0; // Remove padding
-    margin-top: 20px; // Space above the list
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    margin-top: 20px; /* Space above the list */
 }
 
-// Style for Each To-Do Item
+/* Style for Each To-Do Item */
 li {
-    background: #f1f1f1; // Light gray background
-    padding: 10px; // Padding inside list item
-    margin: 5px 0; // Space between list items
-    display: flex; // Arrange children (text & buttons) horizontally
-    justify-content: space-between; // Separate text and buttons
-    align-items: center; // Vertically align items
-    border-radius: 5px; // Rounded corners
+    background: #f1f1f1; /* Light gray background */
+    padding: 10px; /* Padding inside list item */
+    margin: 5px 0; /* Space between list items */
+    display: flex; /* Arrange children (text & buttons) horizontally */
+    justify-content: space-between; /* Separate text and buttons */
+    align-items: center; /* Vertically align items */
+    border-radius: 5px; /* Rounded corners */
 }
 
-// Completed Task Style
+/* Completed Task Style */
 .completed {
-    text-decoration: line-through; // Strike-through text
-    opacity: 0.6; // Dim the text
+    text-decoration: line-through; /* Strike-through text */
+    opacity: 0.6; /* Dim the text */
 }
 
-
-//Action Buttons
-// Button Group (Edit, Delete, Complete)
+/* Action Buttons */
+/* Button Group (Edit, Delete, Complete) */
 .action-buttons {
-    display: flex; // Arrange buttons side-by-side
-    gap: 5px; // Space between buttons
+    display: flex; /* Arrange buttons side-by-side */
+    gap: 5px; /* Space between buttons */
 }
 
-// Shared Style for Action Buttons
+/* Shared Style for Action Buttons */
 .edit-btn, .delete-btn, .complete-btn {
-    padding: 5px 10px; // Padding inside buttons
-    cursor: pointer; // Pointer cursor on hover
-    border: none; // No border
-    border-radius: 5px; // Rounded corners
+    padding: 5px 10px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
 }
 
-// Edit Button Style
+/* Edit Button Style */
 .edit-btn {
-    background-color: #ffc107; // Yellow color
-    color: black; // Black text
+    background-color: #ffc107; /* Yellow color */
+    color: black; /* Black text */
 }
 
-// Delete Button Style
+/* Delete Button Style */
 .delete-btn {
-    background-color: red; // Red color
-    color: white; // White text
+    background-color: red; /* Red color */
+    color: white; /* White text */
 }
 
-// Complete Button Style
+/* Complete Button Style */
 .complete-btn {
-    background-color: green; // Green color
-    color: white; // White text
+    background-color: green; /* Green color */
+    color: white; /* White text */
 }
 
-// Hover Effect for Action Buttons
+/* Hover Effect for Action Buttons */
 .edit-btn:hover {
-    background-color: #e0a800; // Darker yellow
+    background-color: #e0a800; /* Darker yellow */
 }
 
 .delete-btn:hover {
-    background-color: darkred; // Darker red
+    background-color: darkred; /* Darker red */
 }
 
 .complete-btn:hover {
-    background-color: darkgreen; // Darker green
+    background-color: darkgreen; /* Darker green */
 }
 
-
-// Modal Styles
-// Modal Background (Hidden by Default)
+/* Modal Styles */
+/* Modal Background (Hidden by Default) */
 .modal {
-    display: none; // Hidden by default
-    position: fixed; // Position relative to viewport
-    top: 50%; // Center vertically
-    left: 50%; // Center horizontally
-    transform: translate(-50%, -50%); // Center the modal
-    background: white; // White background
-    padding: 20px; // Padding inside the modal
-    border-radius: 10px; // Rounded corners
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); // Soft shadow
-    width: 300px; // Fixed width
-    text-align: center; // Center align content
+    display: none; /* Hidden by default */
+    position: fixed; /* Position relative to viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal */
+    background: white; /* White background */
+    padding: 20px; /* Padding inside the modal */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 300px; /* Fixed width */
+    text-align: center; /* Center align content */
 }
 
-// Modal Content (Input Fields & Buttons)
+/* Modal Content (Input Fields & Buttons) */
 .modal-content {
-    display: flex; // Use flexbox
-    flex-direction: column; // Stack inputs and buttons vertically
-    gap: 10px; // Space between inputs and buttons
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack inputs and buttons vertically */
+    gap: 10px; /* Space between inputs and buttons */
 }
-
-
