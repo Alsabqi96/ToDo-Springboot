@@ -97,8 +97,8 @@ async function saveEdit() {
 function closeModal() {
     document.getElementById("editModal").style.display = "none";
 }
-
+  
 // load todo on page load
 fetchTodos();
 
-
+ 
