@@ -5,17 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-
     <!-- Linking External CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <!-- Main Container for To-Do App -->
 <div class="container">
     <!-- App Title -->
     <h1>📝 My To-Do List</h1>
-
     <!-- Input Fields for Adding New To-Do -->
     <div class="input-container">
         <!-- Input for To-Do Title -->
@@ -25,30 +22,24 @@
         <!-- Add Button to Create New To-Do -->
         <button onclick="addTodo()">➕ Add</button>
     </div>
-
     <!-- List to Display All To-Dos -->
     <ul id="todoList"></ul>
 </div>
-
 <!-- Modal for Editing To-Do -->
 <div id="editModal" class="modal">
     <div class="modal-content">
         <!-- Modal Title -->
         <h2>Edit Task</h2>
-
         <!-- Inputs for Editing To-Do Details -->
         <input type="text" id="editTitle" placeholder="Edit title">
         <input type="text" id="editDescription" placeholder="Edit description">
-
         <!-- Buttons for Saving or Cancelling Edits -->
         <button onclick="saveEdit()">💾 Save</button>
         <button onclick="closeModal()">❌ Cancel</button>
     </div>
 </div>
-
 <!-- Linking External JavaScript File -->
 <script src="script.js"></script>
-
 </body>
 </html>
 
