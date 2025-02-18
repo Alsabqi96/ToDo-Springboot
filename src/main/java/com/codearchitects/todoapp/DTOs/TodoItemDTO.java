@@ -58,7 +58,10 @@ public class TodoItemDTO {
     public Boolean getCompleted() {
         return completed;
     }
-
+    /**
+     * Sets the completion status of the To-Do item.
+     * @param completed The completion status to set.
+     */
     public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
