@@ -76,7 +76,10 @@ public class TodoItem {
     public void setId(Long id) {
         this.id = id;
     }
-
+    /**
+     * Sets the title of the To-Do item.
+     * @param title The title to set.
+     */
     public void setTitle(String title) {
         this.title = title;
     }
