@@ -71,7 +71,7 @@ public class TodoItemController {
     }
 
 
-    //delete  todo item by ID
+    // deletes a  todo item by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteTodoItem(@PathVariable Long id) {
         try {
