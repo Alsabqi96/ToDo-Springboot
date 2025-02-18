@@ -73,8 +73,10 @@ public class TodoItemController {
     }
 
 
-    // updates an   existing todo item
-    // return The updated TodoItemDTO or 404 if not found
+    /*
+    updates an   existing todo item
+    return The updated TodoItemDTO or 404 if not found
+    */
     @PutMapping("/{id}")
     public ResponseEntity<?> updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         try {
