@@ -104,6 +104,7 @@ public class TodoItemController {
             // Return success message
             return ResponseEntity.ok("Todo item deleted successfully");
         } catch (RuntimeException e) {
+            // Log error if deletion fails
             logger.error("Error deleting To-Do with ID {}: {}", id, e.getMessage());
             return ResponseEntity.notFound().build();
         }
