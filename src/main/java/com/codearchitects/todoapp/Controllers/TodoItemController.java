@@ -48,6 +48,7 @@ public class TodoItemController {
             // Fetch a specific todo item by ID
             return ResponseEntity.ok(service.getTodoById(id));
         } catch (RuntimeException e) {
+            // Log error if item not find
             logger.error("Error fetching To-Do with ID {}: {}", id, e.getMessage());
             return ResponseEntity.notFound().build();
         }
