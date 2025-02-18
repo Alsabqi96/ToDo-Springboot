@@ -43,7 +43,7 @@ public class TodoItemController {
     }
 
 
-    //create  new todo item
+    // creates a new todo item
     @PostMapping
     public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
         try {
