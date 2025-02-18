@@ -44,7 +44,10 @@ public class TodoItemDTO {
     public String getDescription() {
         return description;
     }
-
+    /**
+     * Sets the description of the To-Do item.
+     * @param description The description to set.
+     */
     public void setDescription(String description) {
         this.description = description;
     }
