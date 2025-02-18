@@ -34,6 +34,7 @@ public class TodoItemController {
     public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
         // Retrieve all To-Do items from the service
         List<TodoItemDTO> todos = service.getAllTodos();
+        //  Retrieve all To-Do items from the service
         return todos.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(todos);
     }
 
