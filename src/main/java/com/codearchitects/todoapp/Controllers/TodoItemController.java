@@ -82,6 +82,7 @@ public class TodoItemController {
         try {
             // Update an existing To-Do item
             TodoItemDTO updatedTodo = service.updateTodoItem(id, request);
+            // Return the updated item
             return ResponseEntity.ok(updatedTodo);
         } catch (RuntimeException e) {
             logger.error("Error updating To-Do with ID {}: {}", id, e.getMessage());
