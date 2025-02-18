@@ -23,7 +23,10 @@ public class TodoItemDTO {
     public void setId(Long id) {
         this.id = id;
     }
-
+    /**
+     * Gets the title of the To-Do item.
+     * @return The title of the To-Do item.
+     */
     public String getTitle() {
         return title;
     }
