@@ -45,6 +45,7 @@ public class TodoItemController {
     @GetMapping("/{id}")
     public ResponseEntity<?> getTodoById(@PathVariable Long id) {
         try {
+            // Fetch a specific todo item by ID
             return ResponseEntity.ok(service.getTodoById(id));
         } catch (RuntimeException e) {
             logger.error("Error fetching To-Do with ID {}: {}", id, e.getMessage());
