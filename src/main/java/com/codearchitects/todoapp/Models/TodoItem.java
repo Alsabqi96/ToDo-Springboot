@@ -60,7 +60,10 @@ public class TodoItem {
     public Boolean getCompleted() {
         return completed;
     }
-
+    /**
+     * Gets the creation timestamp of the To-Do item.
+     * @return The timestamp when the item was created.
+     */
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
