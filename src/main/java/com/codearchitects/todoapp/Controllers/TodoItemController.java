@@ -29,10 +29,10 @@ public class TodoItemController {
      /*
      fetches all todo items
      return list of Todo items dto objects
-     */
+     */     
     @GetMapping
     public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
-        //
+        // Retrieve all To-Do items from the service
         List<TodoItemDTO> todos = service.getAllTodos();
         return todos.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(todos);
     }
