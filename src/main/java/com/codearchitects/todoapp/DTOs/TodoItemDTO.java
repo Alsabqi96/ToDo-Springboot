@@ -9,7 +9,10 @@ public class TodoItemDTO {
     private Boolean completed;
 
 
-    //setters and getters
+    /**
+     * Gets the ID of the To-Do item.
+     * @return The ID of the To-Do item.
+     */
     public Long getId() {
         return id;
     }
