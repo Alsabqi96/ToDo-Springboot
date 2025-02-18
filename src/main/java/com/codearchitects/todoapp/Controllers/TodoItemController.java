@@ -80,6 +80,7 @@ public class TodoItemController {
     @PutMapping("/{id}")
     public ResponseEntity<?> updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         try {
+            // Update an existing To-Do item
             TodoItemDTO updatedTodo = service.updateTodoItem(id, request);
             return ResponseEntity.ok(updatedTodo);
         } catch (RuntimeException e) {
