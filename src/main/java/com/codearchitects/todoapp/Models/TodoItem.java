@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 
-//entity representing in a todo item in database
+// Entity representing a To-Do item in the database
 @Entity
 
 public class TodoItem {
