@@ -99,6 +99,7 @@ public class TodoItemController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteTodoItem(@PathVariable Long id) {
         try {
+            // Delete the specified To-Do item
             service.deleteTodoItem(id);
             return ResponseEntity.ok("Todo item deleted successfully");
         } catch (RuntimeException e) {
