@@ -19,6 +19,7 @@ import java.util.List;
 @RequestMapping(path = "/api/v1/todos")
 public class TodoItemController {
 
+    /*Logger instance for logging errors and info*/
     private static final Logger logger = LoggerFactory.getLogger(TodoItemController.class);
 
     @Autowired
