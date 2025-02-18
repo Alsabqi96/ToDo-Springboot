@@ -66,6 +66,7 @@ public class TodoItemController {
             // Return the created item with a 201 status
             return ResponseEntity.status(201).body(createdTodo);
         } catch (Exception e) {
+            // Log error if creation fails
             logger.error("Error creating To-Do: {}", e.getMessage());
             return ResponseEntity.badRequest().body("Error creating To-Do item: " + e.getMessage());
         }
