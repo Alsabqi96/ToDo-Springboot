@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+/*Define a REST controller for todo items*/
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "/api/v1/todos")
