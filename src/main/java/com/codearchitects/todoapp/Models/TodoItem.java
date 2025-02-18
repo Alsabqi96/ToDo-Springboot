@@ -97,7 +97,10 @@ public class TodoItem {
     public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
-
+    /**
+     * Sets the creation timestamp of the To-Do item.
+     * @param createdAt The timestamp to set.
+     */
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
