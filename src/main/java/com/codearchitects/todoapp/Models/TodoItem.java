@@ -39,7 +39,10 @@ public class TodoItem {
     public Long getId() {
         return id;
     }
-
+    /**
+     * Gets the title of the To-Do item.
+     * @return The title of the To-Do item.
+     */
     public String getTitle() {
         return title;
     }
