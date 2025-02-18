@@ -32,6 +32,7 @@ public class TodoItem {
         createdAt = LocalDateTime.now();
     }
 
+    // Getters and Setters
     /**
      * Gets the ID of the To-Do item.
      * @return The ID of the To-Do item.
