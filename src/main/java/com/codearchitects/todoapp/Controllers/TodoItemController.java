@@ -44,6 +44,7 @@ public class TodoItemController {
 
 
     // creates a new todo item
+    // return the created todo item dto
     @PostMapping
     public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
         try {
