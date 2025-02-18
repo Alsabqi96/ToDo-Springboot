@@ -61,6 +61,7 @@ public class TodoItemController {
     @PostMapping
     public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
         try {
+            // Create a new To-Do item
             TodoItemDTO createdTodo = service.createTodoItem(request);
             return ResponseEntity.status(201).body(createdTodo);
         } catch (Exception e) {
