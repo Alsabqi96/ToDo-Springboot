@@ -32,7 +32,10 @@ public class TodoItem {
         createdAt = LocalDateTime.now();
     }
 
-    //getters
+    /**
+     * Gets the ID of the To-Do item.
+     * @return The ID of the To-Do item.
+     */
     public Long getId() {
         return id;
     }
