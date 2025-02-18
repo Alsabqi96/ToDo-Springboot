@@ -63,6 +63,7 @@ public class TodoItemController {
         try {
             // Create a new To-Do item
             TodoItemDTO createdTodo = service.createTodoItem(request);
+            // Return the created item with a 201 status
             return ResponseEntity.status(201).body(createdTodo);
         } catch (Exception e) {
             logger.error("Error creating To-Do: {}", e.getMessage());
