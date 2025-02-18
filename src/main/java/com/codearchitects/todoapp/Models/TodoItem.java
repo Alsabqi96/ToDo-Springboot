@@ -53,7 +53,10 @@ public class TodoItem {
     public String getDescription() {
         return description;
     }
-
+    /**
+     * Gets the completion status of the To-Do item.
+     * @return True if completed, otherwise false.
+     */
     public Boolean getCompleted() {
         return completed;
     }
