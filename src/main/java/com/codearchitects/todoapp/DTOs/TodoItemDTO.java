@@ -30,7 +30,10 @@ public class TodoItemDTO {
     public String getTitle() {
         return title;
     }
-
+    /**
+     * Sets the title of the To-Do item.
+     * @param title The title to set.
+     */
     public void setTitle(String title) {
         this.title = title;
     }
