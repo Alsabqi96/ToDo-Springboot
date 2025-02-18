@@ -85,6 +85,7 @@ public class TodoItemController {
             // Return the updated item
             return ResponseEntity.ok(updatedTodo);
         } catch (RuntimeException e) {
+            // Log error if update fails
             logger.error("Error updating To-Do with ID {}: {}", id, e.getMessage());
             return ResponseEntity.notFound().build();
         }
