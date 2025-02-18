@@ -38,9 +38,10 @@ public class TodoItemController {
         return todos.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(todos);
     }
 
-
-    // fetches  todo item by ID
-    // return the corresponding todo item dto
+    /*
+    fetches  todo item by ID
+    return the corresponding todo item dto
+    */
     @GetMapping("/{id}")
     public ResponseEntity<?> getTodoById(@PathVariable Long id) {
         try {
