@@ -90,7 +90,10 @@ public class TodoItem {
     public void setDescription(String description) {
         this.description = description;
     }
-
+    /**
+     * Sets the completion status of the To-Do item.
+     * @param completed The completion status to set.
+     */
     public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
