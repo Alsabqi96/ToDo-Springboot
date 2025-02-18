@@ -21,8 +21,7 @@ public class TodoItemController {
     @Autowired
     private TodoItemService service;
 
-
-    //get all todo items
+    // fetches all todo items
     @GetMapping
     public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
         List<TodoItemDTO> todos = service.getAllTodos();
