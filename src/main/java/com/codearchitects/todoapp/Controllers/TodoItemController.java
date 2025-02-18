@@ -30,7 +30,7 @@ public class TodoItemController {
     }
 
 
-    //get todo item by ID
+    // fetches  todo item by ID
     @GetMapping("/{id}")
     public ResponseEntity<?> getTodoById(@PathVariable Long id) {
         try {
