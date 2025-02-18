@@ -37,7 +37,10 @@ public class TodoItemDTO {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    /**
+     * Gets the description of the To-Do item.
+     * @return The description of the To-Do item.
+     */
     public String getDescription() {
         return description;
     }
