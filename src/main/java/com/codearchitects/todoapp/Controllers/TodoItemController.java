@@ -22,6 +22,7 @@ public class TodoItemController {
     private TodoItemService service;
 
     // fetches all todo items
+    // return list of Todo items dto objects
     @GetMapping
     public ResponseEntity<List<TodoItemDTO>> getAllTodos() {
         List<TodoItemDTO> todos = service.getAllTodos();
