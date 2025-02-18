@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+
 /*Define a REST controller for todo items*/
 @RestController
 @CrossOrigin(origins = "*")
@@ -26,6 +27,7 @@ public class TodoItemController {
     @Autowired
     private TodoItemService service;
 
+
      /*
      fetches all todo items
      return list of Todo items dto objects
@@ -37,6 +39,7 @@ public class TodoItemController {
         //  Retrieve all To-Do items from the service
         return todos.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(todos);
     }
+
 
     /*
     fetches  todo item by ID
@@ -53,6 +56,7 @@ public class TodoItemController {
             return ResponseEntity.notFound().build();
         }
     }
+
 
      /*
      creates a new todo item
@@ -73,6 +77,7 @@ public class TodoItemController {
     }
 
 
+
     /*
     updates an   existing todo item
     return The updated TodoItemDTO or 404 if not found
@@ -90,6 +95,7 @@ public class TodoItemController {
             return ResponseEntity.notFound().build();
         }
     }
+
 
 
     /*
