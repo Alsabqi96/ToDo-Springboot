@@ -24,7 +24,9 @@ public class TodoItem {
     private LocalDateTime createdAt;
 
 
-    //auto assigns creation timestamp before inserting into database
+    /**
+     * Automatically assigns the creation timestamp before inserting into the database.
+     */
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
