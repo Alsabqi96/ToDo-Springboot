@@ -57,7 +57,7 @@ public class TodoItemController {
     }
 
 
-    //update  existing todo item
+    // updates an   existing todo item
     @PutMapping("/{id}")
     public ResponseEntity<?> updateTodoItem(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         try {
