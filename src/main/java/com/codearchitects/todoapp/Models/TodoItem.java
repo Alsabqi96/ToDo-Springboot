@@ -83,7 +83,10 @@ public class TodoItem {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    /**
+     * Sets the description of the To-Do item.
+     * @param description The description to set.
+     */
     public void setDescription(String description) {
         this.description = description;
     }
