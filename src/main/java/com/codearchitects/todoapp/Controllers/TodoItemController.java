@@ -72,6 +72,7 @@ public class TodoItemController {
 
 
     // deletes a  todo item by ID
+    // return success message or 404 if not found
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteTodoItem(@PathVariable Long id) {
         try {
