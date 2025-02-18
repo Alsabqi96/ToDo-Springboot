@@ -8,7 +8,7 @@ public class TodoItemDTO {
     private String description;
     private Boolean completed;
 
-
+     // Setters and Getters
     /**
      * Gets the ID of the To-Do item.
      * @return The ID of the To-Do item.
@@ -51,7 +51,10 @@ public class TodoItemDTO {
     public void setDescription(String description) {
         this.description = description;
     }
-
+    /**
+     * Gets the completion status of the To-Do item.
+     * @return True if completed, otherwise false.
+     */
     public Boolean getCompleted() {
         return completed;
     }
