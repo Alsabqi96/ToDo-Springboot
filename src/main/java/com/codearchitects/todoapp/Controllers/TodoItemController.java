@@ -22,6 +22,7 @@ public class TodoItemController {
     /*Logger instance for logging errors and info*/
     private static final Logger logger = LoggerFactory.getLogger(TodoItemController.class);
 
+    /*Inject the todo service*/
     @Autowired
     private TodoItemService service;
 
