@@ -16,7 +16,10 @@ public class TodoItemDTO {
     public Long getId() {
         return id;
     }
-
+    /**
+     * Sets the ID of the To-Do item.
+     * @param id The ID to set.
+     */
     public void setId(Long id) {
         this.id = id;
     }
