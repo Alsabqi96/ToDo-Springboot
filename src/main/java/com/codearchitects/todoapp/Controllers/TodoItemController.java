@@ -54,9 +54,10 @@ public class TodoItemController {
         }
     }
 
-
-    // creates a new todo item
-    // return the created todo item dto or an error response
+     /*
+     creates a new todo item
+     return the created todo item dto or an error response
+     */
     @PostMapping
     public ResponseEntity<?> createTodoItem(@RequestBody CreateTodoRequest request) {
         try {
