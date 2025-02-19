@@ -23,6 +23,7 @@ body {
     transform: scale(1.02);
 }
 
+
 /* Glassmorphism Effect */
 .glass-effect {
     background: rgba(255, 255, 255, 0.6);
