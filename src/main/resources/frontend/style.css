@@ -56,6 +56,7 @@ input {
     transform: scale(1.02);
 }
 
+
 /* Completed Task */
 .completed {
     text-decoration: line-through;
