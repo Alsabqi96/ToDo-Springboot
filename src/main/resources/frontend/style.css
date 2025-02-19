@@ -14,6 +14,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+
 /* Add subtle hover effect */
 .todo-card:hover {
     transform: scale(1.02);
