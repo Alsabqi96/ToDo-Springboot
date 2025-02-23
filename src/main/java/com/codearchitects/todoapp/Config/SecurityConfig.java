@@ -32,6 +32,7 @@ public class SecurityConfig {
         this.userDetailsService = userDetailsService;
     }
 
+
     /**
      * Configures security settings for the application.
      * - Disables CSRF (since we're using JWT-based authentication)
