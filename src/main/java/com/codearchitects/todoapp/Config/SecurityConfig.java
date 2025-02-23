@@ -40,6 +40,7 @@ public class SecurityConfig {
      * - Configures session management as stateless (JWT does not use sessions)
      * - Adds JWT request filter before UsernamePasswordAuthenticationFilter
      */
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
