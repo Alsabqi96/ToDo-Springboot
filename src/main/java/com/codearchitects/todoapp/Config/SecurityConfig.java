@@ -21,6 +21,8 @@ import java.util.List;
 @Configuration
 public class SecurityConfig {
 
+
+    // Dependencies for JWT authentication and user details service
     private final JwtRequestFilter jwtRequestFilter;
     private final CustomUserDetailsService userDetailsService;
 
