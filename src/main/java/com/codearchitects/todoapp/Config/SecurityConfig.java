@@ -1,6 +1,7 @@
 package com.codearchitects.todoapp.Config;
 
 
+
 import com.codearchitects.todoapp.Filters.JwtRequestFilter;
 import com.codearchitects.todoapp.Services.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
