@@ -31,7 +31,14 @@ public class SecurityConfig {
         this.jwtRequestFilter = jwtRequestFilter;
         this.userDetailsService = userDetailsService;
     }
-
+    /**
+     * Configures security settings for the application.
+     * - Disables CSRF (since we're using JWT-based authentication)
+     * - Allows unauthenticated access to "/auth/**" endpoints
+     * - Requires authentication for all other endpoints
+     * - Configures session management as stateless (JWT does not use sessions)
+     * - Adds JWT request filter before UsernamePasswordAuthenticationFilter
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
