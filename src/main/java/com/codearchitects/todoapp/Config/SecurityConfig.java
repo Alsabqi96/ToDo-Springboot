@@ -31,6 +31,7 @@ public class SecurityConfig {
         this.jwtRequestFilter = jwtRequestFilter;
         this.userDetailsService = userDetailsService;
     }
+
     /**
      * Configures security settings for the application.
      * - Disables CSRF (since we're using JWT-based authentication)
@@ -66,3 +67,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+
+
+
+
