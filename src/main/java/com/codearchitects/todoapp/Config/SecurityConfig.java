@@ -42,6 +42,7 @@ public class SecurityConfig {
      * - Adds JWT request filter before UsernamePasswordAuthenticationFilter
      */
 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
