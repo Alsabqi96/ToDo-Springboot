@@ -36,6 +36,7 @@ public class AuthService {
             throw new InvalidCredentialsException("Invalid username or password");
         }
 
+
         // Generate JWT token
         return jwtUtil.generateToken(user.getUsername(), user.getEmail(), user.getRole().name());
     }
