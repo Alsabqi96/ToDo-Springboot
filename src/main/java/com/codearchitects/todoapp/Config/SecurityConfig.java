@@ -26,7 +26,7 @@ public class SecurityConfig {
         final HttpSecurity httpSecurity = http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/auth/**").permitAll()
-                        .requestMatchers("/jobApplication/**").hasRole(Role.ADMIN.name())
+                        /*.requestMatchers("/jobApplication/**").hasRole(Role.ADMIN.name())*/ // Added only as a sample
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
