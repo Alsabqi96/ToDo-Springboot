@@ -1,5 +1,6 @@
 package com.codearchitects.todoapp.Filters;
 
+import com.codearchitects.todoapp.Services.CustomUserDetailsService;
 import com.codearchitects.todoapp.Utils.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -23,7 +24,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private JwtUtil jwtUtil;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService userDetailsService;
 
 
     /*@Override
@@ -99,6 +100,13 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         chain.doFilter(request, response);
     }
 }
+
+
+
+
+
+
+
 
 
 
