@@ -1,0 +1,118 @@
+/* Background */
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Centering Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glassmorphism Login Card */
+.login-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.login-card:hover {
+    transform: scale(1.05);
+}
+
+/* Input Field Container */
+.input-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+.input-container input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+/* Input Icons */
+.input-container i {
+    font-size: 18px;
+    color: #2a5298;
+    margin-right: 10px;
+}
+
+/* Input Focus Effect */
+.input-container input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    transform: scale(1.03);
+}
+
+/* Login Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Login Icon */
+.btn-primary i {
+    font-size: 18px;
+}
+
+/* Animated Loader */
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+/* Loader Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
