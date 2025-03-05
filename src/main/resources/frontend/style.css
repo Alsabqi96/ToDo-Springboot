@@ -76,7 +76,7 @@ input {
     font-weight: bold;
 }
 .logout-btn:hover {
-    background-color: #e60000;
+    background-color: #0056b3;
     transform: scale(1.1);
 }
 /* Floating Button Effect */
@@ -151,5 +151,6 @@ input {
 .Btn:active {
   transform: translate(2px ,2px);
 }
+
 
 
