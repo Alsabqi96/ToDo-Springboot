@@ -6,8 +6,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-@Data
-@Builder
 @MappedSuperclass
 public class BaseEntity {
 
@@ -16,7 +14,7 @@ public class BaseEntity {
     Integer id;
 
     @Column(updatable = false)
-    Data createdDate;
+    Date createdDate;
 
     Date updatedDate;
 
@@ -30,11 +28,11 @@ public class BaseEntity {
         this.id = id;
     }
 
-    public Data getCreatedDate() {
+    public Date getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(Data createdDate) {
+    public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
 
@@ -54,20 +52,6 @@ public class BaseEntity {
         isActive = active;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
