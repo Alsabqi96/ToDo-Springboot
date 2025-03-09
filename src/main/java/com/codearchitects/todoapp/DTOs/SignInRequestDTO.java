@@ -1,6 +1,5 @@
 package com.codearchitects.todoapp.DTOs;
 
-
 import lombok.Data;
 
 @Data
@@ -25,5 +24,10 @@ public class SignInRequestDTO {
         this.password = password;
     }
 }
+
+
+
+
+
 
 
