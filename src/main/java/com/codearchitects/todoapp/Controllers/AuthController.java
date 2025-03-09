@@ -25,6 +25,7 @@ public class AuthController {
             authService.signUp(dto);
             return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("message", "User registered!"));
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("error", e.getMessage()));
         }
     }
@@ -39,6 +40,22 @@ public class AuthController {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
