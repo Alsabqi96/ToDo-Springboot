@@ -1,6 +1,6 @@
 package com.codearchitects.todoapp.Config;
 
-
+import com.codearchitects.todoapp.Enums.Role;
 import com.codearchitects.todoapp.Filters.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -25,18 +25,18 @@ public class SecurityConfig {
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        final HttpSecurity httpSecurity = http.csrf(csrf -> csrf.disable())
+        final HttpSecurity httpSecurity = http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( HttpMethod.POST,"/auth/**").permitAll()
-                        /*.requestMatchers("/jobApplication/**").hasRole(Role.ADMIN.name())*/ // Added only as a sample
+                        .requestMatchers("/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(corsFilter(), UsernamePasswordAuthenticationFilter.class);
-
 
         return http.build();
     }
@@ -45,8 +45,6 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-
 
     @Bean
     public CorsFilter corsFilter() {
@@ -64,6 +62,11 @@ public class SecurityConfig {
         return source;
     }
 }
+
+
+
+
+
 
 
 
